@@ -1,5 +1,5 @@
 import React from 'react';
-import { axiosWithAuth } from '../axiosWithAuth';
+import { axiosWithAuth } from '../utils/axiosWithAuth';
 import { ClipLoader } from 'react-spinners'
 
 class Login extends React.Component {
@@ -31,7 +31,7 @@ class Login extends React.Component {
         console.log(res);
         console.log(res.data);
         localStorage.setItem("token", res.data.payload);
-        this.props.history.push("/protected");
+        this.props.history.push("/bubbles");
       })
       .catch(err => console.log(err));
   };
