@@ -1,6 +1,6 @@
-import React from 'react';
-import { axiosWithAuth } from '../utils/axiosWithAuth';
-import { ClipLoader } from 'react-spinners'
+import React from "react";
+import { axiosWithAuth } from "../utils/axiosWithAuth";
+import { ClipLoader } from "react-spinners";
 
 class Login extends React.Component {
   state = {
@@ -38,8 +38,8 @@ class Login extends React.Component {
 
   render() {
     setTimeout(() => {
-      this.setState({ loading: false })
-    }, 1500)
+      this.setState({ loading: false });
+    }, 1500);
 
     return (
       <div>
@@ -57,10 +57,9 @@ class Login extends React.Component {
             onChange={this.handleChange}
           />
           <button>
-            <ClipLoader
-              size={5}
-              loading={this.state.loading}
-            />Log in</button>
+            <ClipLoader size={5} loading={this.state.loading} />
+            Log in
+          </button>
         </form>
       </div>
     );
